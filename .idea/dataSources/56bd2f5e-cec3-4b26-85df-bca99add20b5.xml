@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="companydetail">
+  <database-model serializer="dbm" dbms="SQLITE" family-id="SQLITE" format-version="4.19">
+    <root id="1">
+      <ServerVersion>3.31.1</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="main">
+      <Current>1</Current>
+    </schema>
+    <collation id="3" parent="1" name="BINARY"/>
+    <collation id="4" parent="1" name="NOCASE"/>
+    <collation id="5" parent="1" name="RTRIM"/>
+    <table id="6" parent="2" name="address"/>
+    <table id="7" parent="2" name="company"/>
+    <table id="8" parent="2" name="email"/>
+    <table id="9" parent="2" name="phone"/>
+    <table id="10" parent="2" name="sqlite_master">
+      <System>1</System>
+    </table>
+    <table id="11" parent="2" name="website"/>
+    <column id="12" parent="6" name="id">
+      <Position>1</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="13" parent="6" name="Address_owner_id">
+      <Position>2</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="14" parent="6" name="Address_location">
+      <Position>3</Position>
+      <DataType>VARCHAR(255)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="15" parent="6" name="address_Address_owner_id">
+      <ColNames>Address_owner_id</ColNames>
+      <ColumnCollations></ColumnCollations>
+    </index>
+    <key id="16" parent="6">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="17" parent="6">
+      <ColNames>Address_owner_id</ColNames>
+      <RefTableName>company</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="18" parent="7" name="id">
+      <Position>1</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="19" parent="7" name="Company_Name">
+      <Position>2</Position>
+      <DataType>VARCHAR(255)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="20" parent="7" name="Type_of_Company">
+      <Position>3</Position>
+      <DataType>VARCHAR(255)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="21" parent="7" name="Whatsapp_Number">
+      <Position>4</Position>
+      <DataType>VARCHAR(255)|0s</DataType>
+    </column>
+    <column id="22" parent="7" name="Fax">
+      <Position>5</Position>
+      <DataType>VARCHAR(255)|0s</DataType>
+    </column>
+    <column id="23" parent="7" name="Linkedin_Profile">
+      <Position>6</Position>
+      <DataType>VARCHAR(255)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="24" parent="7" name="Presence_in_India">
+      <Position>7</Position>
+      <DataType>VARCHAR(255)|0s</DataType>
+    </column>
+    <key id="25" parent="7">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="26" parent="8" name="id">
+      <Position>1</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="27" parent="8" name="Email_owner_id">
+      <Position>2</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="28" parent="8" name="Email_address">
+      <Position>3</Position>
+      <DataType>VARCHAR(255)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="29" parent="8" name="email_Email_owner_id">
+      <ColNames>Email_owner_id</ColNames>
+      <ColumnCollations></ColumnCollations>
+    </index>
+    <key id="30" parent="8">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="31" parent="8">
+      <ColNames>Email_owner_id</ColNames>
+      <RefTableName>company</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="32" parent="9" name="id">
+      <Position>1</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="33" parent="9" name="Phone_owner_id">
+      <Position>2</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="34" parent="9" name="Phone_number">
+      <Position>3</Position>
+      <DataType>VARCHAR(255)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="35" parent="9" name="phone_Phone_owner_id">
+      <ColNames>Phone_owner_id</ColNames>
+      <ColumnCollations></ColumnCollations>
+    </index>
+    <key id="36" parent="9">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="37" parent="9">
+      <ColNames>Phone_owner_id</ColNames>
+      <RefTableName>company</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="38" parent="10" name="type">
+      <Position>1</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="39" parent="10" name="name">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="40" parent="10" name="tbl_name">
+      <Position>3</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="41" parent="10" name="rootpage">
+      <Position>4</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <column id="42" parent="10" name="sql">
+      <Position>5</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="43" parent="11" name="id">
+      <Position>1</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="44" parent="11" name="Web_owner_id">
+      <Position>2</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="45" parent="11" name="Web_address">
+      <Position>3</Position>
+      <DataType>VARCHAR(255)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="46" parent="11" name="website_Web_owner_id">
+      <ColNames>Web_owner_id</ColNames>
+      <ColumnCollations></ColumnCollations>
+    </index>
+    <key id="47" parent="11">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="48" parent="11">
+      <ColNames>Web_owner_id</ColNames>
+      <RefTableName>company</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+  </database-model>
+</dataSource>
